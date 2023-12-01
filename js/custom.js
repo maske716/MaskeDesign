@@ -19,7 +19,7 @@
 	//Blog page cursors with image	
 	//Blog post 1:
 	$(".cursor-link-blog-post-1")
-	.on("mouseenter", function() {	 
+	.on("click", function() {	 
 	$('.cursor').addClass("active-blog-post-1")	  
 	})
 	.on("mouseleave", function() {	  
@@ -131,12 +131,6 @@
 
 	
 	$(document).ready(function() {
-
-		$.cookieBar({
-			fixed: true,
-			bottom: true,
-			zindex: '1',
-		});
 
 		//Subtitle
 		$('.subtitle').delay(1500).animate({'opacity': 1}, 1000);
