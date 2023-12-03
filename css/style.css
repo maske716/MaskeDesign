@@ -2328,22 +2328,20 @@ figure.vimeo a img, figure.youtube a img {
 	z-index: 4;
 }
 
-.cursor.cursor-dot.active-blog-post-1,
-.cursor.cursor-dot.active-blog-post-2,
-.cursor.cursor-dot.active-blog-post-3,
-.cursor.cursor-dot.active-blog-post-4,
-.cursor.cursor-dot.active-blog-post-5,
-.cursor.cursor-dot.active-blog-post-6,
-.cursor.cursor-dot.active-blog-post-7 {
+.cursor.cursor-dot.active-passion-starwars,
+.cursor.cursor-dot.active-passion-matrix,
+.cursor.cursor-dot.active-passion-milan,
+.cursor.cursor-dot.active-passion-thelastofus,
+.cursor.cursor-dot.active-passion-siliconvalley,
+.cursor.cursor-dot.active-passion-cocker {
 	opacity: 0;
 }
-.cursor-shadow.active-blog-post-1,
-.cursor-shadow.active-blog-post-2,
-.cursor-shadow.active-blog-post-3,
-.cursor-shadow.active-blog-post-4,
-.cursor-shadow.active-blog-post-5,
-.cursor-shadow.active-blog-post-6,
-.cursor-shadow.active-blog-post-7 {
+.cursor-shadow.active-passion-starwars,
+.cursor-shadow.active-passion-matrix,
+.cursor-shadow.active-passion-milan,
+.cursor-shadow.active-passion-thelastofus,
+.cursor-shadow.active-passion-siliconvalley,
+.cursor-shadow.active-passion-cocker {
 	--size: 160px;
 	border-color: rgba(255,255,255, 0);
 	border-width: 0;
@@ -2354,27 +2352,95 @@ figure.vimeo a img, figure.youtube a img {
 	
 	z-index: 1;
 }
-.cursor-shadow.active-blog-post-1 {
+.cursor-shadow.active-passion-starwars {
 	background-image: url('../img/gif/starwars.gif');
 }
-.cursor-shadow.active-blog-post-2 {
-	background-image: url('../img/blog/2.jpg');
+.cursor-shadow.active-passion-matrix {
+	background-image: url('../img/gif/matrix.gif');
 }
-.cursor-shadow.active-blog-post-3 {
-	background-image: url('../img/blog/3.jpg');
+.cursor-shadow.active-passion-milan {
+	background-image: url('../img/gif/milan.gif');
 }
-.cursor-shadow.active-blog-post-4 {
-	background-image: url('../img/blog/4.jpg');
+.cursor-shadow.active-passion-thelastofus {
+	background-image: url('../img/gif/thelastofus.gif');
 }
-.cursor-shadow.active-blog-post-5 {
-	background-image: url('../img/blog/5.jpg');
+.cursor-shadow.active-passion-siliconvalley {
+	background-image: url('../img/gif/siliconvalley.gif');
 }
-.cursor-shadow.active-blog-post-6 {
-	background-image: url('../img/blog/6.jpg');
+.cursor-shadow.active-passion-cocker {
+	background-image: url('../img/gif/cocker.gif');
 }
-.cursor-shadow.active-blog-post-7 {
-	background-image: url('../img/blog/7.jpg');
+
+@keyframes background-pan {
+	from {
+	  background-position: 0% center;
+	}
+	
+	to {
+	  background-position: -200% center;
+	}
 }
+:root {  
+	--purple: rgb(123, 31, 162);
+	--violet: rgb(103, 58, 183);
+	--pink: rgb(244, 143, 177);
+}
+.magic-text {
+	animation: background-pan 3s linear infinite;
+	background: linear-gradient(
+	  to right,
+	  var(--purple),
+	  var(--violet),
+	  var(--pink),
+	  var(--purple)
+	);
+	background-size: 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
+}
+
+@keyframes scale {
+	from, to {
+	  transform: scale(0);
+	}
+	
+	50% {
+	  transform: scale(1);
+	}
+}
+  
+@keyframes rotate {
+	from {
+	  transform: rotate(0deg);
+	}
+	
+	to {
+	  transform: rotate(180deg);
+	}
+}
+.magic {
+	display: inline-block;
+	position: relative;
+}
+.magic > .magic-star {
+	--size: clamp(20px, 1.5vw, 30px);
+	animation: scale 700ms ease forwards;
+	display: block;
+	height: var(--size);
+	left: var(--star-left);
+	position: absolute;
+	top: var(--star-top);
+	width: var(--size);
+  }
+  .magic > .magic-star > svg {
+	animation: rotate 1000ms linear infinite;
+	display: block;
+	opacity: 0.7;
+  }
+  .magic > .magic-star > svg > path {
+	fill: #EE731B;
+  }
 
 /* #Post
 ================================================== */
@@ -3030,6 +3096,35 @@ figure.vimeo a img, figure.youtube a img {
 }
 .footer a:hover{ 
 	color: #fff;
+}
+
+/* #Expertises
+================================================== */
+.expertise {
+	overflow: hidden;
+	border-bottom: 1px solid #fff;
+}
+.exHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+.exHeader p {
+    margin: 0;
+}
+.toggle-icon {
+	float: right;
+	cursor: pointer;
+}
+.expandable {
+	height: 0;
+}
+.expertise.opened .toggle-icon {
+    rotate: 180deg;
+}
+.expertise.opened .expandable{
+	height: auto;
 }
 
 /* #Tooltip

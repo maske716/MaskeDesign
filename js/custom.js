@@ -18,60 +18,52 @@
 	})		
 	//Blog page cursors with image	
 	//Blog post 1:
-	$(".cursor-link-blog-post-1")
+	$(".cursor-link-passion-starwars")
 	.on("click", function() {	 
-	$('.cursor').addClass("active-blog-post-1")	  
+	$('.cursor').addClass("active-passion-starwars")	  
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-blog-post-1")	  
+	$('.cursor').removeClass("active-passion-starwars")	  
 	})	
 	//Blog post 2:
-	$(".cursor-link-blog-post-2")
-	.on("mouseenter", function() {	 
-	$('.cursor').addClass("active-blog-post-2")	  
+	$(".cursor-link-passion-matrix")
+	.on("click", function() {	 
+	$('.cursor').addClass("active-passion-matrix")	  
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-blog-post-2")	  
+	$('.cursor').removeClass("active-passion-matrix")	  
 	})	
-	//Blog post 3:
-	$(".cursor-link-blog-post-3")
-	.on("mouseenter", function() {	 
-	$('.cursor').addClass("active-blog-post-3")	  
-	})
-	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-blog-post-3")	  
-	})		
-	//Blog post 4:
-	$(".cursor-link-blog-post-4")
-	.on("mouseenter", function() {	 
-	$('.cursor').addClass("active-blog-post-4")	  
-	})
-	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-blog-post-4")	  
-	})	
-	//Blog post 5:
-	$(".cursor-link-blog-post-5")
-	.on("mouseenter", function() {	 
-	$('.cursor').addClass("active-blog-post-5")	  
-	})
-	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-blog-post-5")	  
-	})		
-	//Blog post 6:
-	$(".cursor-link-blog-post-6")
-	.on("mouseenter", function() {	 
-	$('.cursor').addClass("active-blog-post-6")	  
-	})
-	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-blog-post-6")	  
-	})		
 	//Blog post 7:
-	$(".cursor-link-blog-post-7")
-	.on("mouseenter", function() {	 
-	$('.cursor').addClass("active-blog-post-7")	  
+	$(".cursor-link-passion-milan")
+	.on("click", function() {	 
+	$('.cursor').addClass("active-passion-milan")
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-blog-post-7")	  
+	$('.cursor').removeClass("active-passion-milan")	  
+	})
+	//Blog post 7:
+	$(".cursor-link-passion-thelastofus")
+	.on("click", function() {	 
+	$('.cursor').addClass("active-passion-thelastofus")
+	})
+	.on("mouseleave", function() {	  
+	$('.cursor').removeClass("active-passion-thelastofus")	  
+	})
+	//Blog post 7:
+	$(".cursor-link-passion-siliconvalley")
+	.on("click", function() {	 
+	$('.cursor').addClass("active-passion-siliconvalley")
+	})
+	.on("mouseleave", function() {	  
+	$('.cursor').removeClass("active-passion-siliconvalley")	  
+	})
+	//Blog post 7:
+	$(".cursor-link-passion-cocker")
+	.on("click", function() {	 
+	$('.cursor').addClass("active-passion-cocker")
+	})
+	.on("mouseleave", function() {	  
+	$('.cursor').removeClass("active-passion-cocker")	  
 	})
 	
 	
@@ -266,11 +258,92 @@
 				$(this).parent().wrapAll('<div class="video-wrapper">');
 				$(PlaceV).html('<iframe src="' + videoLink + '?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=c4c3ca" width="500" height="281" frameborder="0"></iframe>');
 			}
-		});	
+		});
 
+		/* #Expertises
+		================================================== */
+		$('.expertise .exHeader').click(function() {
+			$(this).parent('.expertise').toggleClass('opened');
+		});
+
+		/* #Magic stars
+		================================================== */
+		function startMagicAnimationForWord(word) {
+			let index = 0,
+			  interval = 1000;
+		  
+			const rand = (min, max) =>
+			  Math.floor(Math.random() * (max - min + 1)) + min;
+		  
+			const animate = star => {
+			  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+			  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+		  
+			  star.style.animation = "none";
+			  star.offsetHeight;
+			  star.style.animation = "";
+			}
+		  
+			// Funzione per creare e aggiungere gli span.magic-star
+			const createMagicStar = () => {
+			  const magicSpan = document.createElement('span');
+			  magicSpan.classList.add('magic-star');
+		  
+			  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+			  svg.setAttribute('viewBox', '0 0 512 512');
+		  
+			  // Inserisci il valore del percorso SVG qui per definire la forma della stella
+			  const pathValue = "M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z";
+			  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+			  path.setAttribute('d', pathValue);
+		  
+			  svg.appendChild(path);
+			  magicSpan.appendChild(svg);
+		  
+			  word.appendChild(magicSpan);
+			};
+		  
+			// Aggiungi solo 3 span.magic-star
+			for (let i = 0; i < 3; i++) {
+			  createMagicStar();
+			}
+		  
+			const magicStars = word.querySelectorAll('.magic-star');
+			magicStars.forEach((star, index) => {
+			  setTimeout(() => {
+				animate(star);
+		  
+				setInterval(() => animate(star), 1000);
+			  }, index * (interval / 3))
+			});
+		}
+		  
+		function removeMagicAnimationFromWord(word) {
+			const magicStars = word.querySelectorAll('.magic-star');
+			magicStars.forEach(star => {
+			  star.remove();
+			});
+		  
+			// Rimuovi la classe "magic-text" dallo span interno
+			const magicText = word.querySelector('.magic-text');
+			if (magicText) {
+			  magicText.classList.remove('magic-text');
+			}
+		}
+		  
+		// Aggiungi gestore di eventi click a tutti gli elementi con classe "magic"
+		const magicWords = document.querySelectorAll('.magic');
+		magicWords.forEach(word => {
+			word.addEventListener('click', () => {
+				removeMagicAnimationFromWord(word);
+			});
+			
+			startMagicAnimationForWord(word);
+		});
+		  
 		
-		/* Portfolio Sorting */
-
+		/* #Portfolio sorting
+		================================================== */
 		(function ($) { 		
 			var container = $('#projects-grid');						
 			function getNumbColumns() { 
