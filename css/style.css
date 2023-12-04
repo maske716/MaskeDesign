@@ -2328,20 +2328,20 @@ figure.vimeo a img, figure.youtube a img {
 	z-index: 4;
 }
 
-.cursor.cursor-dot.active-passion-starwars,
-.cursor.cursor-dot.active-passion-matrix,
-.cursor.cursor-dot.active-passion-milan,
-.cursor.cursor-dot.active-passion-thelastofus,
-.cursor.cursor-dot.active-passion-siliconvalley,
-.cursor.cursor-dot.active-passion-cocker {
+.cursor.cursor-dot.active-passion.starwars,
+.cursor.cursor-dot.active-passion.matrix,
+.cursor.cursor-dot.active-passion.milan,
+.cursor.cursor-dot.active-passion.thelastofus,
+.cursor.cursor-dot.active-passion.siliconvalley,
+.cursor.cursor-dot.active-passion.cocker {
 	opacity: 0;
 }
-.cursor-shadow.active-passion-starwars,
-.cursor-shadow.active-passion-matrix,
-.cursor-shadow.active-passion-milan,
-.cursor-shadow.active-passion-thelastofus,
-.cursor-shadow.active-passion-siliconvalley,
-.cursor-shadow.active-passion-cocker {
+.cursor-shadow.active-passion.starwars,
+.cursor-shadow.active-passion.matrix,
+.cursor-shadow.active-passion.milan,
+.cursor-shadow.active-passion.thelastofus,
+.cursor-shadow.active-passion.siliconvalley,
+.cursor-shadow.active-passion.cocker {
 	--size: 160px;
 	border-color: rgba(255,255,255, 0);
 	border-width: 0;
@@ -2349,26 +2349,64 @@ figure.vimeo a img, figure.youtube a img {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
 	z-index: 1;
 }
-.cursor-shadow.active-passion-starwars {
+.cursor-shadow.active-passion:after{
+	content: "";
+	width: max-content;
+	padding: 4px 16px;
+	font-size: 12px;
+	background-color: #EE731B;
+	color: #fff;
+	display: block;
+	position: absolute;
+	bottom: -28px;
+	left: 50%;
+	rotate: -2deg;
+	transform: translateX(-50%);
+	border-radius: 20px;
+}
+/* starwars */
+.cursor-shadow.active-passion.starwars {
 	background-image: url('../img/gif/starwars.gif');
 }
-.cursor-shadow.active-passion-matrix {
+.cursor-shadow.active-passion.starwars:after{
+	content: "Yes, I have a lightsaber at home!";
+}
+/* matrix */
+.cursor-shadow.active-passion.matrix {
 	background-image: url('../img/gif/matrix.gif');
 }
-.cursor-shadow.active-passion-milan {
+.cursor-shadow.active-passion.matrix:after{
+	content: "I took the red pill";
+}
+/* milan */
+.cursor-shadow.active-passion.milan {
 	background-image: url('../img/gif/milan.gif');
 }
-.cursor-shadow.active-passion-thelastofus {
+.cursor-shadow.active-passion.milan:after{
+	content: "I support the best team in the world!";
+}
+/* thelastofus */
+.cursor-shadow.active-passion.thelastofus {
 	background-image: url('../img/gif/thelastofus.gif');
 }
-.cursor-shadow.active-passion-siliconvalley {
+.cursor-shadow.active-passion.thelastofus:after{
+	content: "My favorite videogame!";
+}
+/* silicon valley */
+.cursor-shadow.active-passion.siliconvalley {
 	background-image: url('../img/gif/siliconvalley.gif');
 }
-.cursor-shadow.active-passion-cocker {
+.cursor-shadow.active-passion.siliconvalley:after{
+	content: "My favorite TV Series!";
+}
+/* cocker */
+.cursor-shadow.active-passion.cocker {
 	background-image: url('../img/gif/cocker.gif');
+}
+.cursor-shadow.active-passion.cocker:after{
+	content: "I have a dog called Cookie";
 }
 
 @keyframes background-pan {
@@ -2423,6 +2461,9 @@ figure.vimeo a img, figure.youtube a img {
 	display: inline-block;
 	position: relative;
 }
+.magic span, .magic img{
+	cursor: pointer;
+}
 .magic > .magic-star {
 	--size: clamp(20px, 1.5vw, 30px);
 	animation: scale 700ms ease forwards;
@@ -2442,7 +2483,89 @@ figure.vimeo a img, figure.youtube a img {
 	fill: #EE731B;
   }
 
-/* #Post
+/* #Works
+================================================== */
+.works .device.mob{
+	position: relative;
+	width: 322px;
+	height: 690px;
+	background-color: #D9D9D9;
+	border-radius: 40px;
+	margin: 0 auto;
+}
+.works .device.mob .square{
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	background-color: #F3F3F3;
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+}
+.works .device.mob .square.uno{
+    left: -60px;
+    bottom: 20%;
+}
+.works .device.mob .square.due{
+    right: -60px;
+    top: -60px;
+}
+.works .device.mob .rectangle{
+	position: absolute;
+	width: 250px;
+	height: 120px;
+	background-color: #F3F3F3;
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+}
+.works .device.mob .rectangle.uno{
+    left: -60px;
+    top: 20%;
+}
+.works .device.mob .rectangle.due{
+    right: -20%;
+    top: 50%;
+	transform: translateY(-50%);
+}
+.works .device.mob .rectangle.tre{
+    left: 60%;
+    bottom: -60px;
+}
+.works .projectInfo{
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.projectInfo h3 {
+    font-weight: 900;
+	font-size: 52px;
+}
+.projectInfo p {
+    font-size: 22px;
+    line-height: 32px;
+	margin: 0;
+}
+.projectInfo .tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+	gap: 12px;
+	margin: 12px 0 24px;
+}
+.projectInfo .tags div {
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 4px 16px;
+}
+.projectInfo .tags div.primary{
+	border-color: #EE731B;
+	color: #EE731B;
+}
+
+  /* #Post
 ================================================== */
 
 .post-box{
@@ -3164,8 +3287,6 @@ figure.vimeo a img, figure.youtube a img {
 
 .tipper.bottom .tipper-content {  }
 .tipper.bottom .tipper-caret { background-position: center top; top: -5px; left: 0; }
-
-
 
 /* #Media
 ================================================== */

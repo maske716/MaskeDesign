@@ -8,62 +8,75 @@
 			left: e.pageX,
 			top: e.pageY
 		})	  
-	})
+	});
 	$(".cursor-link")
 	.on("mouseenter", function() {	 
-	$('.cursor').addClass("active")	  
+		$('.cursor').addClass("active")	  
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active")	  
-	})		
+		$('.cursor').removeClass("active")	  
+	});
+	
 	//Blog page cursors with image	
-	//Blog post 1:
+	//Star Wars
 	$(".cursor-link-passion-starwars")
 	.on("click", function() {	 
-	$('.cursor').addClass("active-passion-starwars")	  
+		$('.cursor').addClass("active-passion");
+		$('.cursor').addClass("starwars");
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-passion-starwars")	  
-	})	
+		$('.cursor').removeClass("active-passion");
+		$('.cursor').removeClass("starwars");
+	});
 	//Blog post 2:
 	$(".cursor-link-passion-matrix")
 	.on("click", function() {	 
-	$('.cursor').addClass("active-passion-matrix")	  
+		$('.cursor').addClass("active-passion");
+		$('.cursor').addClass("matrix");
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-passion-matrix")	  
+		$('.cursor').removeClass("active-passion");
+		$('.cursor').removeClass("matrix");
 	})	
-	//Blog post 7:
+	//Milan
 	$(".cursor-link-passion-milan")
 	.on("click", function() {	 
-	$('.cursor').addClass("active-passion-milan")
+		$('.cursor').addClass("active-passion");
+		$('.cursor').addClass("milan");
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-passion-milan")	  
-	})
+		$('.cursor').removeClass("active-passion");
+		$('.cursor').removeClass("milan");
+	});
 	//Blog post 7:
 	$(".cursor-link-passion-thelastofus")
 	.on("click", function() {	 
-	$('.cursor').addClass("active-passion-thelastofus")
+		$('.cursor').addClass("active-passion");
+		$('.cursor').addClass("thelastofus");
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-passion-thelastofus")	  
+		$('.cursor').removeClass("active-passion");
+		$('.cursor').removeClass("thelastofus");
 	})
 	//Blog post 7:
 	$(".cursor-link-passion-siliconvalley")
 	.on("click", function() {	 
-	$('.cursor').addClass("active-passion-siliconvalley")
+		$('.cursor').addClass("active-passion");
+		$('.cursor').addClass("siliconvalley");
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-passion-siliconvalley")	  
+		$('.cursor').removeClass("active-passion");
+		$('.cursor').removeClass("siliconvalley");
 	})
 	//Blog post 7:
 	$(".cursor-link-passion-cocker")
 	.on("click", function() {	 
-	$('.cursor').addClass("active-passion-cocker")
+		$('.cursor').addClass("active-passion");
+		$('.cursor').addClass("cocker");
 	})
 	.on("mouseleave", function() {	  
-	$('.cursor').removeClass("active-passion-cocker")	  
+		$('.cursor').removeClass("active-passion");
+		$('.cursor').removeClass("cocker");
 	})
 	
 	
@@ -119,8 +132,7 @@
 		});
 	  });    
 	}
-	scrollBanner();		
-
+	scrollBanner();
 	
 	$(document).ready(function() {
 
@@ -167,97 +179,6 @@
 			event.preventDefault();
 			jQuery('html, body').animate({scrollTop: 0}, duration);
 			return false;
-		})
-
-		
-		/* Hero Case study images */			
-		
-		$('.case-study-name:nth-child(1)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(1)').addClass("show");
-			$('.case-study-name:nth-child(1)').addClass('active');
-		})
-		$('.case-study-name:nth-child(2)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(2)').addClass("show");
-			$('.case-study-name:nth-child(2)').addClass('active');
-		})
-		$('.case-study-name:nth-child(3)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(3)').addClass("show");
-			$('.case-study-name:nth-child(3)').addClass('active');
-		})
-		$('.case-study-name:nth-child(4)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(4)').addClass("show");
-			$('.case-study-name:nth-child(4)').addClass('active');
-		})
-		$('.case-study-name:nth-child(5)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(5)').addClass("show");
-			$('.case-study-name:nth-child(5)').addClass('active');
-		})
-		
-		$('.case-study-name:nth-child(6)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(6)').addClass("show");
-			$('.case-study-name:nth-child(6)').addClass('active');
-		})
-		$('.case-study-name:nth-child(7)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(7)').addClass("show");
-			$('.case-study-name:nth-child(7)').addClass('active');
-		})
-		$('.case-study-name:nth-child(8)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(8)').addClass("show");
-			$('.case-study-name:nth-child(8)').addClass('active');
-		})
-		$('.case-study-name:nth-child(9)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(9)').addClass("show");
-			$('.case-study-name:nth-child(9)').addClass('active');
-		})
-		$('.case-study-name:nth-child(10)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(10)').addClass("show");
-			$('.case-study-name:nth-child(10)').addClass('active');
-		})
-	
-		$('.case-study-name:nth-child(1)').trigger('mouseenter')
-		
-				
-		//Tooltip
-
-		$(".tipped").tipper();
-		
-		
-		/* Video */
-		
-		$(".container").fitVids();
-						
-		$('.vimeo a,.youtube a').on('click', function (e) {
-			e.preventDefault();
-			var videoLink = $(this).attr('href');
-			var classeV = $(this).parent();
-			var PlaceV = $(this).parent();
-			if ($(this).parent().hasClass('youtube')) {
-				$(this).parent().wrapAll('<div class="video-wrapper">');
-				$(PlaceV).html('<iframe frameborder="0" height="333" src="' + videoLink + '?autoplay=1&showinfo=0" title="YouTube video player" width="547"></iframe>');
-			} else {
-				$(this).parent().wrapAll('<div class="video-wrapper">');
-				$(PlaceV).html('<iframe src="' + videoLink + '?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=c4c3ca" width="500" height="281" frameborder="0"></iframe>');
-			}
 		});
 
 		/* #Expertises
@@ -340,159 +261,60 @@
 			
 			startMagicAnimationForWord(word);
 		});
-		  
-		
-		/* #Portfolio sorting
-		================================================== */
-		(function ($) { 		
-			var container = $('#projects-grid');						
-			function getNumbColumns() { 
-				var winWidth = $(window).width(), 
-					columnNumb = 1;								
-				if (winWidth > 1500) {
-					columnNumb = 3;
-				} else if (winWidth > 1200) {
-					columnNumb = 3;
-				} else if (winWidth > 900) {
-					columnNumb = 3;
-				} else if (winWidth > 600) {
-					columnNumb = 1;
-				} else if (winWidth > 300) {
-					columnNumb = 1;
-				}				
-				return columnNumb;
-			}						
-			function setColumnWidth() { 
-				var winWidth = $(window).width(), 
-					columnNumb = getNumbColumns(), 
-					postWidth = Math.floor(winWidth / columnNumb);
-
-			}			
-			$('#portfolio-filter #filter a').on('click', function () { 
-				var selector = $(this).attr('data-filter');
-				
-				$(this).parent().parent().find('a').removeClass('current');
-				$(this).addClass('current');
-				
-				container.isotope( { 
-					filter : selector 
-				});
-				
-				setTimeout(function () { 
-					reArrangeProjects();
-				}, 300);								
-				return false;
-			});			
-			function reArrangeProjects() { 
-				setColumnWidth();
-				container.isotope('reLayout');
-			}						
-			container.imagesLoaded(function () { 
-				setColumnWidth();								
-				container.isotope( { 
-					itemSelector : '.portfolio-box', 
-					layoutMode : 'masonry', 
-					resizable : false 
-				} );
-			} );													
-			$(window).on('debouncedresize', function () { 
-				reArrangeProjects();				
-			} );
-		} )(jQuery);
-
-		if ($(window).width() > 480) {
-			// text animation 1
-	        var text = document.getElementById('animation');
-	        var newDom = '';
-	        var animationDelay = 6;
-
-	        for(let i = 0; i < text.innerText.length; i++)
-	        {
-	            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
-	        }
-
-	        text.innerHTML = newDom;
-	        var length = text.children.length;
-
-	        for(let i = 0; i < length; i++)
-	        {
-	            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
-	        }
-
-	        // text animation 2
-	        var text2 = document.getElementById('animation2');
-	        var newDom2 = '';
-	        var animationDelay2 = 12;
-
-	        for(let i = 0; i < text2.innerText.length; i++)
-	        {
-	            newDom2 += '<span class="char">' + (text2.innerText[i] == ' ' ? '&nbsp;' : text2.innerText[i])+ '</span>';
-	        }
-
-	        text2.innerHTML = newDom2;
-	        var length = text2.children.length;
-
-	        for(let i = 0; i < length; i++)
-	        {
-	            text2.children[i].style['animation-delay'] = animationDelay2 * i + 'ms';
-	        }
-
-	        // text animation 3
-	        var text3 = document.getElementById('animation3');
-	        var newDom3 = '';
-	        var animationDelay3 = 24;
-
-	        for(let i = 0; i < text3.innerText.length; i++)
-	        {
-	            newDom3 += '<span class="char">' + (text3.innerText[i] == ' ' ? '&nbsp;' : text3.innerText[i])+ '</span>';
-	        }
-
-	        text3.innerHTML = newDom3;
-	        var length = text3.children.length;
-
-	        for(let i = 0; i < length; i++)
-	        {
-	            text3.children[i].style['animation-delay'] = animationDelay3 * i + 'ms';
-	        }
-
-	        // text animation 4
-	        var text4 = document.getElementById('animation4');
-	        var newDom4 = '';
-	        var animationDelay4 = 36;
-
-	        for(let i = 0; i < text4.innerText.length; i++)
-	        {
-	            newDom4 += '<span class="char">' + (text4.innerText[i] == ' ' ? '&nbsp;' : text4.innerText[i])+ '</span>';
-	        }
-
-	        text4.innerHTML = newDom4;
-	        var length = text4.children.length;
-
-	        for(let i = 0; i < length; i++)
-	        {
-	            text4.children[i].style['animation-delay'] = animationDelay4 * i + 'ms';
-	        }
-
-	        // text animation 4
-	        var text5 = document.getElementById('animation5');
-	        var newDom5 = '';
-	        var animationDelay5 = 48;
-
-	        for(let i = 0; i < text5.innerText.length; i++)
-	        {
-	            newDom5 += '<span class="char">' + (text5.innerText[i] == ' ' ? '&nbsp;' : text5.innerText[i])+ '</span>';
-	        }
-
-	        text5.innerHTML = newDom5;
-	        var length = text5.children.length;
-
-	        for(let i = 0; i < length; i++)
-	        {
-	            text5.children[i].style['animation-delay'] = animationDelay5 * i + 'ms';
-	        }
-    	}
 
 	});
+
+	/*$(function() {
+		var controller = new ScrollMagic.Controller();
+		var worksScene;
+	  
+		var moveRectangles = function(scrollPos) {
+		  $(".rectangle.uno").css({
+			left: -scrollPos * 0.07 + "px"
+		  });
+	  
+		  $(".rectangle.due").css({
+			right: -scrollPos * 0.05 + "px"
+		  });
+	  
+		  $(".rectangle.tre").css({
+			left: -scrollPos * 0.03 + "px"
+		  });
+		};
+	  
+		var checkWorksVisibility = function() {
+		  var worksOffset = $(".works").offset().top;
+		  var windowHeight = $(window).height();
+		  var scrollTop = $(window).scrollTop();
+	  
+		  if (worksOffset - scrollTop < windowHeight) {
+			if (!worksScene) {
+			  worksScene = new ScrollMagic.Scene({
+				triggerElement: ".works",
+				duration: $(".works").height()
+			  })
+				.on("update", function(e) {
+				  moveRectangles(e.scrollPos);
+				})
+				.addIndicators() // Da rimuovere in produzione
+				.addTo(controller);
+			}
+		  } else {
+			if (worksScene) {
+			  worksScene.destroy(true);
+			  worksScene = null;
+			}
+		  }
+		};
+	  
+		// Verifica la visibilità di .works quando la pagina viene caricata o lo scroll avviene
+		$(window).on("load scroll resize", function() {
+		  checkWorksVisibility();
+		});
+	});*/
+	  
+	  
+			
  
 	/* DebouncedResize Function */
 	
