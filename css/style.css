@@ -289,8 +289,6 @@ mark{
 	font-weight: 800;
 	line-height: 1.1;
 }
-.section-title-wrap h1 strong{
-}
 
 .char{
     animation: an 1s ease-out 1 both;
@@ -608,7 +606,90 @@ a:hover {
 	background-color: rgba(21, 21, 21, 0);
 }
 
+.secretPassionFound{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	display: none;
 
+}
+.secretPassionFound p {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 0 auto 4px;
+	letter-spacing: 1px;
+}
+.secretPassionFound .gems{
+	display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.secretPassionFound .gems div{
+	width: 8px;
+	height: 8px;
+	background-color: #B9B9B9;
+	border-radius: 50%;
+    position: relative;
+}
+.secretPassionFound .gems div.active{
+	background-color: #EE731B;
+}
+.secretPassionFound .gems div span {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #B9B9B9;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 1.5s ease-in-out, height 1.5s ease-in-out, opacity 1.5s ease-in-out;
+    z-index: 1;
+	display: block;
+	opacity: 1;
+}
+.secretPassionFound .gems div.active.expanded span {
+	background-color: #EE731B;
+    width: 40px;
+    height: 40px;
+	opacity: 0;
+}
+.secretPassionFound .gems div .attention {
+    position: absolute;
+    width: 250px;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    height: auto;
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333;
+    padding: 8px 20px;
+	display: none;
+	text-transform: inherit;
+}
+.secretPassionFound .gems div .attention:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: -4px;
+    left: 115px;
+    rotate: 45deg;
+    z-index: -1;
+}
+p.occhiello {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .3rem;
+}
 .nav-but-wrap{ 
 	position: relative;
 	display: inline-block;
@@ -1304,8 +1385,6 @@ body.nav-active .nav__list-item:nth-child(10) {
 	cursor: pointer;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.07);	
 	transition: all 250ms linear;
-}
-.social-wrap ul a:hover{ 
 }
  
 /* #Hero Fullscreen Slider Section
@@ -2178,109 +2257,6 @@ body.nav-active .nav__list-item:nth-child(10) {
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
-.project-link-wrap:hover p{
-	/*opacity: 0.15;*/
-}
-
-.project-link-wrap.on-contact p{
-}
-
-/* #Video wrapper
-================================================== */
-
-.video-section {
-	position: relative;
-	width:100%;
-	margin:0 auto;
-}
-.video-wrapper, figure.vimeo, figure.youtube {
-	margin:0;
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 0;
-	height: 0;
-	overflow: hidden;
-}	
-.video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}	
-figure.youtube a img, figure.vimeo a img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: auto;
-	height: 100%;
-	max-width:none;
-}	
-figure.vimeo a:after, figure.youtube a:after {
-	content:"";
-	width:60px;
-	height:60px;
-	background: #212121;
-	z-index:9;
-	position:absolute;
-	top:50%;
-	left:50%;
-	margin:-30px 0 0 -30px;
-	border-radius:50%;
-	box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.15);
-	cursor: pointer;
-	cursor: url('../img/play.png') 6 8,pointer;
-    -webkit-transition: all 300ms linear;
-    transition: all 300ms linear; 
-}
-figure.vimeo:hover a:after, figure.youtube:hover a:after {
-	box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.1);
-}
-figure.vimeo:hover a:after, figure.youtube:hover a:after{
-	opacity: 0;
-}
-figure.vimeo a:before, figure.youtube a:before {
-	border-left: 8px solid #c4c3ca;
-}
-figure.vimeo a:before, figure.youtube a:before {
-	content:"";
-	width: 0;
-	height: 0;
-	border-top: 6px solid transparent;
-	border-bottom: 6px solid transparent;
-	z-index:10;
-	position:absolute;
-	top:50%;
-	left:50%;
-	margin-left: -3px;
-	margin-top: -5px;
-	display:block;
-	cursor: pointer;
-	cursor: url('../img/play.png') 6 8,pointer;
-    -webkit-transition: all 300ms linear;
-    -moz-transition: all 300ms linear;
-    -o-transition: all 300ms linear;
-    -ms-transition: all 300ms linear;
-    transition: all 300ms linear; 
-}
-figure.vimeo:hover a:before, figure.youtube:hover a:before {
-	border-color: transparent;
-}	
-figure.vimeo a:hover img, figure.youtube a:hover img {
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-}	
-figure.vimeo a img, figure.youtube a img {
-    -webkit-transition: all 300ms linear;
-    -moz-transition: all 300ms linear;
-    -o-transition: all 300ms linear;
-    -ms-transition: all 300ms linear;
-    transition: all 300ms linear; 
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	cursor: pointer;
-	cursor: url('../img/play.png') 6 8,pointer;
-}
 
 /* #Parallax
 ================================================== */
@@ -2478,6 +2454,7 @@ figure.vimeo a img, figure.youtube a img {
 	animation: rotate 1000ms linear infinite;
 	display: block;
 	opacity: 0.7;
+	cursor: pointer;
   }
   .magic > .magic-star > svg > path {
 	fill: #EE731B;
@@ -2529,6 +2506,36 @@ figure.vimeo a img, figure.youtube a img {
 .works .device.mob .rectangle.tre{
     left: 60%;
     bottom: -60px;
+}
+.works .device.desk{
+	position: relative;
+}
+.works .device.desk .topBarBrowser{
+	position: relative;
+    width: 100%;
+    height: 32px;
+    background-color: #fff;
+    border-bottom: 1px solid #949494;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+}
+.works .device.desk .topBarBrowser div{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+.works .device.desk .topBarBrowser div:nth-child(1){
+	background-color: #FF6058;
+}
+.works .device.desk .topBarBrowser div:nth-child(2){
+	background-color: #FFBF2E;
+}
+.works .device.desk .topBarBrowser div:nth-child(3){
+	background-color: #2CCB40;
 }
 .works .projectInfo{
 	display: flex;
@@ -3225,16 +3232,21 @@ figure.vimeo a img, figure.youtube a img {
 ================================================== */
 .expertise {
 	overflow: hidden;
-	border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
 }
 .exHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
+	cursor: pointer;
 }
 .exHeader p {
     margin: 0;
+	cursor: pointer;
 }
 .toggle-icon {
 	float: right;
@@ -3242,12 +3254,66 @@ figure.vimeo a img, figure.youtube a img {
 }
 .expandable {
 	height: 0;
+	color: #B9B9B9;
+	line-height: 32px;
 }
 .expertise.opened .toggle-icon {
     rotate: 180deg;
 }
 .expertise.opened .expandable{
 	height: auto;
+}
+
+/* #Tools
+================================================== */
+.scroller {
+	max-width: 100%;
+}
+
+.scroller__inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.scroller[data-animated="true"] {
+	overflow: hidden;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	flex-wrap: nowrap;
+	-webkit-animation: scroll var(--_animation-duration, 70s)
+		var(--_animation-direction, forwards) linear infinite;
+			animation: scroll var(--_animation-duration, 70s)
+		var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+	--_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+	--_animation-direction: forwards;
+}
+.scroller .logoContainer{
+	width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@-webkit-keyframes scroll {
+	to {
+		transform: translate(calc(-50% - 0.5rem));
+	}
+}
+
+@keyframes scroll {
+	to {
+		transform: translate(calc(-50% - 0.5rem));
+	}
 }
 
 /* #Tooltip

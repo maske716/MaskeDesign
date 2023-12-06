@@ -262,6 +262,70 @@
 			startMagicAnimationForWord(word);
 		});
 
+		/* #Passions Counter
+		================================================== */
+		var passionCounter = 0;
+
+		$('.link-passion').click(function(){
+			if ($(this).hasClass('link-passion')) {
+				passionCounter++;
+				$(this).removeClass('link-passion');
+		
+				if (passionCounter > 0) {
+					if ($('header.cd-header').hasClass('is-fixed')){
+						$('header.cd-header').addClass('is-visible');
+					}
+					setTimeout(function() { 
+						$('.gems div').removeClass('active'); 
+						$('.gems div:lt(' + passionCounter + ')').addClass('active');
+						$('.gems div').removeClass('expanded'); 
+						$('.gems div span').hide();
+						$('.gems div:nth-child(' + passionCounter + ') span').show();
+						setTimeout(function() { 
+							$('.gems div:nth-child(' + passionCounter + ')').addClass('expanded');
+						}, 100);
+						
+					}, 500);
+				}
+		
+				if (passionCounter === 1){
+					$('.secretPassionFound').show();
+					$('.secretPassionFound .gems div .attention').delay(1500).fadeTo(500 , 1, function() {
+						$('.secretPassionFound .gems div .attention').delay(4000).fadeOut(500);
+					});
+				}
+			}
+		});
+
+		/* #Tools
+		================================================== */
+		const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+		
 	});
 
 	/*$(function() {
