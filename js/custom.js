@@ -136,10 +136,12 @@
 	
 	$(document).ready(function() {
 
-		//Subtitle
+		/* #Subtitle
+		================================================== */
 		$('.subtitle').delay(1500).animate({'opacity': 1}, 1000);
 		
-		//Loading page animation
+		/* #Loading page
+		================================================== */
 		$(".animsition").animsition({	  
 			inClass               :   'fade-in-down-sm',
 			outClass              :   'fade-out-down-sm',
@@ -164,8 +166,8 @@
 		});	
 
 		
-		//Scroll back to top
-	
+		/* #Back to top
+		================================================== */
 		var offset = 300;
 		var duration = 400;
 		jQuery(window).on('scroll', function() {
@@ -179,12 +181,6 @@
 			event.preventDefault();
 			jQuery('html, body').animate({scrollTop: 0}, duration);
 			return false;
-		});
-
-		/* #Expertises
-		================================================== */
-		$('.expertise .exHeader').click(function() {
-			$(this).parent('.expertise').toggleClass('opened');
 		});
 
 		/* #Magic stars
@@ -301,30 +297,30 @@
 		================================================== */
 		const scrollers = document.querySelectorAll(".scroller");
 
-// If a user hasn't opted in for recuded motion, then we add the animation
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
+		// If a user hasn't opted in for recuded motion, then we add the animation
+		if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+		addAnimation();
+		}
 
-function addAnimation() {
-  scrollers.forEach((scroller) => {
-    // add data-animated="true" to every `.scroller` on the page
-    scroller.setAttribute("data-animated", true);
+		function addAnimation() {
+		scrollers.forEach((scroller) => {
+			// add data-animated="true" to every `.scroller` on the page
+			scroller.setAttribute("data-animated", true);
 
-    // Make an array from the elements within `.scroller-inner`
-    const scrollerInner = scroller.querySelector(".scroller__inner");
-    const scrollerContent = Array.from(scrollerInner.children);
+			// Make an array from the elements within `.scroller-inner`
+			const scrollerInner = scroller.querySelector(".scroller__inner");
+			const scrollerContent = Array.from(scrollerInner.children);
 
-    // For each item in the array, clone it
-    // add aria-hidden to it
-    // add it into the `.scroller-inner`
-    scrollerContent.forEach((item) => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicatedItem);
-    });
-  });
-}
+			// For each item in the array, clone it
+			// add aria-hidden to it
+			// add it into the `.scroller-inner`
+			scrollerContent.forEach((item) => {
+			const duplicatedItem = item.cloneNode(true);
+			duplicatedItem.setAttribute("aria-hidden", true);
+			scrollerInner.appendChild(duplicatedItem);
+			});
+		});
+		}
 		
 	});
 
@@ -347,15 +343,15 @@ function addAnimation() {
 		};
 	  
 		var checkWorksVisibility = function() {
-		  var worksOffset = $(".works").offset().top;
+		  var worksOffset = $(".project.economiaPro").offset().top;
 		  var windowHeight = $(window).height();
 		  var scrollTop = $(window).scrollTop();
 	  
 		  if (worksOffset - scrollTop < windowHeight) {
 			if (!worksScene) {
 			  worksScene = new ScrollMagic.Scene({
-				triggerElement: ".works",
-				duration: $(".works").height()
+				triggerElement: ".project.economiaPro",
+				duration: $(".project.economiaPro").height()
 			  })
 				.on("update", function(e) {
 				  moveRectangles(e.scrollPos);

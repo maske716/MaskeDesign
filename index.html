@@ -40,8 +40,7 @@
 	
 	<!-- CSS
 	================================================== -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
 	<link rel="stylesheet" href="css/animsition.min.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
@@ -178,40 +177,45 @@
 						<p class="occhiello">
 							Expertises
 						</p>
-						
-						<div class="expertise">
-							<div class="exHeader cursor-link">
-								<p>Branding</p>
-								<img class="toggle-icon" src="img/arrowEx.svg" />
-							</div>
-							<div class="expandable">
-								<p>
+
+						<div class="accordion accordion-flush expertise" id="accordionFlushExample">
+							<div class="accordion-item">
+							  <h2 class="accordion-header" id="flush-headingOne">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+									Branding
+								</button>
+							  </h2>
+
+							  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
 									In the realm of branding, my passion lies in crafting visual identities that eloquently convey a brand's story and values in a unique manner. As a craftsman of corporate identity, I specialize in creating distinctive logos and compelling visual material that stands out for its originality and impact.
-								</p>
+								</div>
+							  </div>
 							</div>
-						</div>
-							
-						<div class="expertise">
-							<div class="exHeader cursor-link">
-								<p>Digital Design</p>
-								<img class="toggle-icon" src="img/arrowEx.svg" />
-							</div>
-							<div class="expandable">
-								<p>
+
+							<div class="accordion-item">
+							  <h2 class="accordion-header" id="flush-headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+									Digital Design
+								</button>
+							  </h2>
+							  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
 									My expertise in digital design spans across various platforms and mediums, from website interfaces to interactive applications. Leveraging a combination of design principles and cutting-edge technologies, I strive to create immersive and intuitive digital solutions that captivate and delight users.
 									<br><br>
 									In the dynamic world of digital design, my commitment is to stay at the forefront of trends and technologies, continuously pushing the boundaries to deliver digital solutions that transcend expectations and leave a lasting impact.
-								</p>
+								</div>
+							  </div>
 							</div>
-						</div>
 
-						<div class="expertise">
-							<div class="exHeader cursor-link">
-								<p>UI Design</p>
-								<img class="toggle-icon" src="img/arrowEx.svg" />
-							</div>
-							<div class="expandable">
-								<p>
+							<div class="accordion-item">
+							  <h2 class="accordion-header" id="flush-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+									UI Design
+								</button>
+							  </h2>
+							  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
 									My journey in UI design is driven by a passion for user-centricity. Like a 
 									<i class="cursor-link link-passion cursor-link-passion-starwars">
 										<span class="magic">
@@ -219,17 +223,18 @@
 										</span>
 									</i>
 									mastering the art of balance, I thrive on the challenge of crafting interfaces that not only captivate visually but also guide users through an intuitive and delightful experience. From wireframes to pixel-perfect designs, every element is strategically positioned, akin to aligning the stars, to enhance usability and foster engagement.
-								</p>
+								</div>
+							  </div>
 							</div>
-						</div>
 
-						<div class="expertise">
-							<div class="exHeader cursor-link">
-								<p>Front-end Development</p>
-								<img class="toggle-icon" src="img/arrowEx.svg" />
-							</div>
-							<div class="expandable">
-								<p>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingFour">
+								  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+										Front-end Development
+								  </button>
+								</h2>
+								<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+								  <div class="accordion-body">
 									As a frontend developer, I specialize in sculpting digital experiences that seamlessly intertwine aesthetics and functionality—a journey akin to navigating a world where 
 									<i class="cursor-link link-passion cursor-link-passion-matrix">
 										<span class="magic">
@@ -241,9 +246,10 @@
 									Recently, I've delved into the world of Flutter, captivated by its versatility in building cross-platform applications.
 									<br><br>
 									My dedication to frontend development is driven by a passion for staying at the forefront of technological innovation. I thrive on the challenges of creating immersive user experiences while ensuring the highest standards of performance and usability.
-								</p>
-							</div>
-						</div>
+								  </div>
+								</div>
+							  </div>
+						  </div>
 					</div>
 					<div class="section clearfix"></div>
 				</div>	
@@ -252,7 +258,7 @@
 
 		<!-- Tools
 		================================================== -->
-		<div class="section padding-top padding-bottom background-dark-5">
+		<div class="section padding-top mt-5 mb-5 background-dark-5">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-9 text-left">
@@ -265,11 +271,11 @@
 			</div>			
 		</div>
 
-		<div class="section padding-top padding-bottom background-dark-5 tools">
+		<div class="section padding-bottom mb-5 background-dark-5 tools">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="traks scroller">
+						<div class="traks scroller mb-5">
 							<div class="scroller__inner">
 								<div class="logoContainer">
 									<img src="img/tools/figma.svg" alt="Figma">
@@ -384,7 +390,7 @@
 
 		<!-- Works
 		================================================== -->
-		<div class="section padding-top padding-bottom background-dark-5">
+		<div class="section padding-top mt-5 background-dark-5">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-9 text-left">
@@ -397,11 +403,11 @@
 			</div>			
 		</div>
 
-		<div class="section padding-top padding-bottom background-dark-5 works">
-			<div class="container-fluid">
+		<div class="section padding-bottom background-dark-5 works">
+			<div class="container">
 				<!-- Single Project Mobile
 				================================================== -->
-				<div class="row">
+				<div class="row project economiaPro padding-bottom mb-5">
 					<div class="col-md-6 text-left projectInfo">
 						<h3>L’Economia Pro</h3>
 
@@ -416,14 +422,19 @@
 						</p>
 					</div>
 
-					<div class="col-md-6 text-left">
+					<div class="col-md-6 containerDevice">
 						<div class="device mob">
-							<div class="square uno"></div>
-							<div class="square due"></div>
+							<div class="smartPhone">
+								<div class="screen">
+									<img src="img/works/economiapro.png" alt="">
+								</div>
+								<div class="square uno"></div>
+								<div class="square due"></div>
 
-							<div class="rectangle uno"></div>
-							<div class="rectangle due"></div>
-							<div class="rectangle tre"></div>
+								<div class="rectangle uno"></div>
+								<div class="rectangle due"></div>
+								<div class="rectangle tre"></div>
+							</div>
 						</div>
 					</div>
 
@@ -432,11 +443,12 @@
 
 				<!-- Single Project Desktop
 				================================================== -->
-				<div class="row">
+				<div class="row padding-top mt-5 padding-bottom mb-5">
 					<div class="col-md-6 text-left projectInfo">
 						<h3>Made with Home</h3>
 
 						<div class="tags">
+							<div class="primary">App</div>
 							<div class="primary">Website</div>
 							<div>UI Design</div>
 							<div>Development</div>
@@ -449,7 +461,7 @@
 						</p>
 					</div>
 
-					<div class="col-md-6 text-left">
+					<div class="col-md-6 containerDevice">
 						<div class="device desk">
 							<div class="topBarBrowser">
 								<div></div>
@@ -457,7 +469,9 @@
 								<div></div>
 							</div>
 
-							<div class="contentBrowser"></div>
+							<div class="contentBrowser">
+								<img src="img/works/madewithome.png" alt="Made with Home" title="Made with Home">
+							</div>
 						</div>
 					</div>
 
@@ -466,7 +480,7 @@
 
 				<!-- Single Project Desktop
 				================================================== -->
-				<div class="row">
+				<div class="row padding-top mt-5 padding-bottom mb-5">
 					<div class="col-md-6 text-left projectInfo">
 						<h3>Corriere Podcast</h3>
 
@@ -480,14 +494,17 @@
 						</p>
 					</div>
 
-					<div class="col-md-6 text-left">
-						<div class="device mob">
-							<div class="square uno"></div>
-							<div class="square due"></div>
+					<div class="col-md-6 containerDevice">
+						<div class="device desk">
+							<div class="topBarBrowser">
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
 
-							<div class="rectangle uno"></div>
-							<div class="rectangle due"></div>
-							<div class="rectangle tre"></div>
+							<div class="contentBrowser">
+								<img src="img/works/corrierePodcast3.png" alt="" title="">
+							</div>
 						</div>
 					</div>
 
@@ -496,7 +513,7 @@
 
 				<!-- Single Project Desktop
 				================================================== -->
-				<div class="row">
+				<div class="row padding-top mt-5 padding-bottom mb-5">
 					<div class="col-md-6 text-left projectInfo">
 						<h3>Style Quiz</h3>
 
@@ -511,14 +528,17 @@
 						</p>
 					</div>
 
-					<div class="col-md-6 text-left">
-						<div class="device mob">
-							<div class="square uno"></div>
-							<div class="square due"></div>
+					<div class="col-md-6 containerDevice">
+						<div class="device desk">
+							<div class="topBarBrowser">
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
 
-							<div class="rectangle uno"></div>
-							<div class="rectangle due"></div>
-							<div class="rectangle tre"></div>
+							<div class="contentBrowser">
+								<img src="img/works/base.png" alt="" title="">
+							</div>
 						</div>
 					</div>
 
@@ -527,9 +547,9 @@
 
 				<!-- Single Project Desktop
 				================================================== -->
-				<div class="row">
+				<div class="row padding-top mt-5 padding-bottom mb-5">
 					<div class="col-md-6 text-left projectInfo">
-						<h3>Nuclear Fusion</h3>
+						<h3>100 giorni in Europa</h3>
 
 						<div class="tags">
 							<div class="primary">Web Reportage</div>
@@ -542,19 +562,150 @@
 						</p>
 					</div>
 
-					<div class="col-md-6 text-left">
-						<div class="device mob">
-							<div class="square uno"></div>
-							<div class="square due"></div>
+					<div class="col-md-6 containerDevice">
+						<div class="device desk">
+							<div class="topBarBrowser">
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
 
-							<div class="rectangle uno"></div>
-							<div class="rectangle due"></div>
-							<div class="rectangle tre"></div>
+							<div class="contentBrowser">
+								<img src="img/works/100giorni.png" alt="" title="">
+							</div>
 						</div>
 					</div>
 
 					<div class="section clearfix"></div>
 				</div>
+			</div>			
+		</div>
+
+		<!-- Clients
+		================================================== -->
+		<div class="section padding-top padding-bottom background-dark-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 text-left">
+						<p class="occhiello">
+							Worked with
+						</p>
+					</div>
+					<div class="section clearfix"></div>
+				</div>	
+			</div>			
+		</div>
+
+		<div class="section padding-top padding-bottom background-dark-5 tools">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="traks scroller">
+							<div class="scroller__inner">
+								<div class="logoContainer">
+									<img src="img/clients/abitare.svg" alt="Abitare">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/beb.svg" alt="B&B">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/canon.svg" alt="Canon">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/cinelli.svg" alt="Cinelli">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/corrieredellasera.svg" alt="Corriere della Sera">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/illy.svg" alt="Illy">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/lagazzettadellosport.svg" alt="La Gazzetta dello Sport">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/leiweb.svg" alt="LeiWeb">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/living.svg" alt="Living">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/mcz.svg" alt="MCZ">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/dove.svg" alt="Dove Viaggi">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/columbus.svg" alt="Columbus Tubi">
+								</div>
+							</div>
+						</div>
+
+						<div class="traks scroller" data-direction="right">
+							<div class="scroller__inner">
+								<div class="logoContainer">
+									<img src="img/clients/effegibi.svg" alt="Effegibi">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/engled.svg" alt="Engled">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/fogmakers.svg" alt="Fogmakers">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/iodonna.svg" alt="IoDonna">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/la27ora.svg" alt="La27ora">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/madewithome.svg" alt="Made with Home">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/masserialigatti.svg" alt="Masseria Li Gatti">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/molteni.svg" alt="Molteni&C">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/oggi.svg" alt="Oggi">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/rcsmediagroup.svg" alt="RCS Mediagroup">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/yoox.svg" alt="Yoox">
+								</div>
+
+								<div class="logoContainer">
+									<img src="img/clients/style.svg" alt="Style Magazine">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section clearfix"></div>
+				</div>	
 			</div>			
 		</div>
 		
@@ -612,7 +763,8 @@
 	<!-- Javascript
     ================================================== -->
 	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 	<script src="js/plugins.js"></script>
 	<!-- script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script -->
